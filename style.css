@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255 255 255);
+    color: rgb(23 23 23);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.0rem;
+    letter-spacing: 0.0em;
+    overflow-x: hidden;
+    line-height: inherit;
+    margin: 0;
+}
+.mainContent{
+    clip: rect(0, 0, 0, 0);
+    border-width: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.topBar{
+    color: rgb(250 250 250);
+    background: #1f1f1f;
+    background-color: 31 31 31;
+    height: 3rem;
+    font-size: 0.8125rem;
+    transition: .5s cubic-bezier(.6,0,.4,1);
+}
+.topbarCenter{
+    border-start-end-radius: 0;
+    border-start-start-radius: 0;
+    grid-template: "announcement"/auto;
+    gap: min(1.5vw);
+}
+.topbarMargin,.announcementBar{
+    grid-area: announcement;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.announcementBar2{
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.topBar2{
+    cursor: grab;
+    width: 100%;
+    height: 48px;    
+    height: 100% !important;
+    overflow: hidden;
+    position: relative;
+}
+.secondHalf{
+    transform: translateX(50%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.topFull{
+    transform: translateX(-50%);
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    height: 100%;
+}
+.TopPortion
+{
+    transition-property: opacity, transform;
+    transition: .7s cubic-bezier(.7,0,.3,1);
+}
+.allIn{
+    display: none;
+}
