@@ -37,23 +37,23 @@ body{
     grid-template: "announcement"/auto;
     gap: min(1.5vw);
 }
-.topbarMargin,.announcementBar{
-    grid-area: announcement;
+.topbarMargin{
+    grid-area: "announcement";
     justify-content: center;
     height: 100%;
     display: flex;
     position: relative;
 }
-.announcementBar2{
-    user-select: none;
+#announcementBar{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    user-select: none;
     justify-content: center;
     width: 100%;
     height: 100%;
     display: flex;
     position: relative;
 }
-.topBar2{
+.announcementBar2{
     cursor: grab;
     width: 100%;
     height: 48px;    
@@ -62,13 +62,13 @@ body{
     position: relative;
 }
 .secondHalf{
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
     position: absolute;
     height: 100%;
     width: 100%;
 }
 .topFull{
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     pointer-events: none;
     position: absolute;
     left: 0;
@@ -76,11 +76,184 @@ body{
     display: flex;
     height: 100%;
 }
-.TopPortion
+/* .TopPortion
 {
     transition-property: opacity, transform;
     transition: .7s cubic-bezier(.7,0,.3,1);
-}
+} */
 .allIn{
     display: none;
+}
+.announ{
+    stroke-width: 1;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    vertical-align: middle;
+}
+.announFree{
+    line-height: 1.25;
+    margin: 0;
+    box-sizing: border-box;
+}
+.announSec{
+    transform: translateX(-50%);
+    pointer-events: auto;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    display: flex;
+    height: 100%;
+}
+.belowBan{
+    z-index: 20;
+    position: sticky;
+    inset-block-start: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: 255 255 255;
+}
+#headerTop{
+    transition: .5s cubic-bezier(.3,1,.3,1);
+    transition-property: opacity,transform;
+    column-gap: .75rem;
+    grid-template: "tools logo icons"/minmax(0, 1fr) auto minmax(0,1fr);
+    background: none;
+    border-start-end-radius: clamp(1rem,1.578vw,1.875rem);
+    border-start-start-radius: clamp(1rem,1.578vw,1.875rem);
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    position: relative;
+    color: rgb(23 23 23);
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+    align-items: center;
+    z-index: 20;
+    width: 100%;
+    display: grid;
+}
+#headerTop::before{
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    background-color: rgb(255 255 255);
+    opacity: 1;
+}
+.firstHalfhead{
+    display: flex;
+    grid-area: tools;
+    justify-content: flex-start;
+    z-index: 2;
+}
+.headerFlex,.flexCart{
+    flex-direction: row-reverse;
+    margin-inline: -0.625rem;
+    gap: 0.375rem;
+    align-items: center;
+    display: flex;
+}
+.WishIcon{
+    position: relative;
+    /* background: linear-gradient(currentColor,currentColor) 0 min(100%,1.35em)/100% 1px no-repeat; */
+    background-position-x: left;
+    text-decoration: inherit;
+    text-decoration-line: none !important;
+    transition: background-size .5s cubic-bezier(.3,1,.3,1), color .3s .5s cubic-bezier(.3,1,.3,1);
+    color: inherit;
+   
+}
+.heartButton{
+    width: 1em;
+    font-size: 22px;
+    display: block;
+    vertical-align: middle;
+    /* box-sizing: border-box; */
+}
+.menuBar{
+    width: 2.75rem;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    appearance: button;
+    background-color: transparent;
+    background-image: none;
+    text-transform: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.odyssiaHead{
+    text-align: center;
+    margin-inline: auto;
+    max-width: 12rem 0px;
+    grid-area: logo;
+    justify-content: center;
+    z-index: 2;
+    display: flex;
+}
+.headingOdyssia{
+    color: inherit;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.headingSpan{
+    clip: rect(0,0,0,0);
+    border-width: 0;
+    height: 1px;
+    margin: -1px;
+    /* overflow: hidden; */
+    padding: 0;
+    /* position: absolute; */
+    white-space: nowrap;
+    /* width: 1px; */
+}
+.logo{
+    max-height: 42.70px;
+    max-width: 90px;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+.secondhalf{
+    grid-area: icons;
+    justify-content: flex-end;
+    z-index: 2;
+    display: flex;
+}
+.borderBox{
+    box-sizing: border-box;
+}
+.searchBut{
+    width: 2.75rem;
+    height: 2.75rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: inherit;
+    text-decoration: inherit;
+}
+.searchBut2{
+    clip: rect(0,0,0,0);
+    border-width: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
