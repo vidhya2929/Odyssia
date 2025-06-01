@@ -103,6 +103,7 @@ body{
     border-start-end-radius: clamp(1rem,1.578vw,1.875rem);
     padding-block-start: 24px;
     padding-block-end: 24px;
+    border-radius: 30px;
     position: relative;
     color: rgb(23 23 23);
     margin: 0 auto;
@@ -233,7 +234,91 @@ body{
     position: absolute;
     pointer-events: none;
 }
-.fullWeb{
+.pageContainer{
+    background-color: rgb(255 255 255);
+}
+.contMain{
+    position: relative;
+}
+.pagePadd{
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+    position: relative;
+    color: rgb(255 255 255);
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+}
+.marPage{
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.PageMar2{
+    transform: translateX(0%);
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    margin-inline-end: 1.875rem;
+    max-width: 280px;
+}
+.zoomImg{
+    /* height: 100%;
+    width: 100%;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    position: absolute;
+    pointer-events: none; */
+    transform: translateX(0%);
+    margin-inline-end: 1.875rem;
+    max-width: min(100vw - 40px, 1900px);
+    border-radius: clamp(0.625rem,1.053rem,1.25rem);
+    height: 0;
+    padding-block-end: 125.0%;
+    position: absolute;
+    left: 0;
+    color: rgb(255 255 255);
+    width: 100%;
+    overflow: hidden;
+}
+.mediaImg{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+.animateImg{
+    transform: scale(1);
+    background-color: rgb(250 250 250);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: relative;
+}
+.pictureElement{
+    background-color: rgb(250 250 250);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+.imggg{
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    vertical-align: middle;
+}
+/* .fullWeb{
     top: 0;
     right: 0;
     bottom: 0;
@@ -276,7 +361,7 @@ body{
     width: 100%;
     background-color: rgb(255 255 255);
 } */
-.paddingImg{
+/* .paddingImg{
     margin: 0 auto;
     padding-inline: 1.25rem;
     position: relative;
@@ -374,4 +459,4 @@ body{
     color: rgb(255 255 255);
     width: 100%;
     overflow: hidden;
-}
+} */ 
