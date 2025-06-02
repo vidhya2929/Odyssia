@@ -96,6 +96,7 @@ body{
     inset-block-start: 0;
 }
 .headPortion{
+    position: sticky;
     column-gap: .75rem;
     grid-template: minmax(0,1fr) auto minmax(0,1fr);
     background: none;
@@ -202,7 +203,7 @@ body{
 }
 .cartSearch{
     grid-area: icons;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     z-index: 2;
     display: flex;
 }
@@ -237,74 +238,23 @@ body{
 .pageContainer{
     background-color: rgb(255 255 255);
 }
-.contMain{
-    position: relative;
-}
-.pagePadd{
-    padding-block-start: 0px;
-    padding-block-end: 0px;
-    position: relative;
-    color: rgb(255 255 255);
+.Imgpadd{
     margin: 0 auto;
     padding-inline: 1.25rem;
-}
-.marPage{
-    height: 350px;
-    overflow: hidden;
     position: relative;
 }
-.PageMar2{
-    transform: translateX(0%);
-    position: absolute;
-    width: 100%;
-    /* height: 100%; */
-    margin-inline-end: 1.875rem;
-    max-width: 280px;
-}
-.zoomImg{
-    /* height: 100%;
-    width: 100%;
-    inset-inline-start: 0;
-    inset-block-start: 0;
-    position: absolute;
-    pointer-events: none; */
-    transform: translateX(0%);
-    margin-inline-end: 1.875rem;
-    max-width: min(100vw - 40px, 1900px);
-    border-radius: clamp(0.625rem,1.053rem,1.25rem);
-    height: 0;
-    padding-block-end: 125.0%;
-    position: absolute;
-    left: 0;
-    color: rgb(255 255 255);
-    width: 100%;
+.margPadd{
+    position: relative;
     overflow: hidden;
+    object-fit: cover;
 }
-.mediaImg{
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+.curveImg{
+    border-radius: 10px;
     overflow: hidden;
-    display: block;
-}
-.animateImg{
-    transform: scale(1);
-    background-color: rgb(250 250 250);
+    margin: 0 auto;
+    padding: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: relative;
-}
-.pictureElement{
-    background-color: rgb(250 250 250);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block;
+    max-width: 100%;
     position: relative;
 }
 .imggg{
@@ -318,145 +268,255 @@ body{
     display: block;
     vertical-align: middle;
 }
-/* .fullWeb{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: .8s cubic-bezier(.7,0,.2,1);
-    transition-property: opacity,visibility;
-    opacity: 0;
+.silverDots{
+    display: flex;
+    position: absolute;
+    bottom: 29px;
+    left: 50%;
+    transform: translateX(-203%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.24rem;
+    z-index: 10;
+}
+.dotBut{
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 9999px;
+    background-color: rgb(255 255 255);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.scrollImg{
+    height: 396.047px;
+    padding-block-start: 39px;
+    padding-block-end: 0px;
+    position: relative;
+    color: rgb(23 23 23);
+    background-color: rgb(255 255 255);
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+}
+.headScroll{
+    margin-bottom: 2rem;
+    line-height: 1;
+    gap: 1rem;
+    flex-direction: column;
     z-index: 1;
-    inset-inline-start: 0;
-    position: fixed;
-    pointer-events: none;
+    text-align: start;
+    display: grid;
 }
-.pageContainer{
-    background-color: 255 255 255;
+.headWrite{
+    font-size: clamp(1.55rem,2.526vw,3.0rem);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: rgb(23 23 23);
+    overflow: hidden;
+    margin: -.1em -.05em;
 }
-.mainContent{
-    position: relative;
-}
-.imgConte{
-    display: flow-root;
-    position: relative;
-}
-.firstImg{
-    padding-block-start: 0px;
-    padding-block-end: 0px;
-    position: relative;
-    color: rgb(255 255 255);
-    background-color: rgb(255 255 255);
-}
-/* .firstImg::before{
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(255 255 255);
-} */
-/* .paddingImg{
-    margin: 0 auto;
+.scrollDiv{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
     padding-inline: 1.25rem;
-    position: relative;
+    margin-inline: -1.25rem;
+    scroll-padding-inline: 1.25rem;
+    padding-block-end: 0.0rem;
+    column-gap: 12px;
+    scrollbar-width: none;
 }
-.slideshow{
+.scrollDiv2{
+    width: 74vw;
+    grid: auto/ auto-flow 74vw;
+    gap: 0.75rem;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;  /*beware*/
+}
+.scroll{
     border-radius: clamp(0.625rem,1.053vw,1.25rem);
-    transform: translateZ(0);
-    overflow: hidden;
-    user-select: none;
-    display: block;
-    position: relative;
-}
-.slideshow2{
-    height: 400px;
-    cursor: grab;
-    overflow: hidden;
-    position: relative;
-}
-.slideshow3{
-    transform: translateX(0%);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-.imgMargin{
-    transform: translateX(0%);
-    margin-inline-end: 1.875rem;
-    max-width: min(100vw - 40px, 1900px);
-    border-radius: clamp(0.625rem,1.053rem,1.25rem);
-    height: 0;
-    padding-block-end: 125.0%;
-    position: absolute;
-    left: 0;
-    color: rgb(255 255 255);
-    width: 100%;
-    overflow: hidden;
-}
-.mediaImg{
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    display: block;
-}
-.animateImg{
     background-color: rgb(250 250 250);
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-    display: relative;
-}
-.pictureElement{
-    background-color: rgb(250 250 250);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block;
     position: relative;
-}
-.imggg{
-    position: static;
-    max-width: 100%;
-    width: 100%;
     height: 100%;
-    backface-visibility: hidden;
     object-fit: cover;
     object-position: center center;
+    max-width: 100%;
     display: block;
-    vertical-align: middle;
 }
-.imgBottom{
-    margin: 0 auto;
-    padding-inline: 1.25rem;
+.scrollItem{
+    flex: 0 0 auto;
+    width: 74vw;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+.writeBelow{
+    padding-inline: 0;
+    padding: 16px 0px;
+    color: rgb(23 23 23);
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    text-align: start;
+    display: flex;
+}
+.newArriv{
+    font-size: 0.8125rem;
+    letter-spacing: -.05em;
+    line-height: 1.25;
+    position: relative;
+}
+.iconArrow{
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 1.5px;
+    display: block;
+}
+.scrolld{
+    margin-bottom: 2rem;
+    gap: 1rem;
+    /* justify-content: space-between; */
+    display: flex;
+    padding-inline: 1.25rem;
+    margin-inline: -1.25rem;
+    overflow-y: auto;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;  
+}
+#commonBut{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 1;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    border-radius: 3.75rem;
+    box-shadow: rgba(168,232,226,0) 0px 0px 0px 0px ;
+    border: none;
+    height: auto;
+    white-space: nowrap;
+}
+.hoverWomen{
+    opacity: 1;
+    background: #171717;
+    background-color: rgb(23 23 23);
+    max-height: 2.75rem;
+    font-size: 0.75rem;
+    padding: 0.875rem 1rem;
+    border-width: 0;
+}
+#commonWo_men{
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.womenBut{
+    color: rgb(255 255 255);
+}
+.whiteMen{
+   background-color: rgba(23, 23, 23, 0.024);
+}
+.menBut{
+    color: rgb(23 23 23);
+}
+.cartBlack{
+    inset-inline-end: 0;
     inset-block-end: 0;
-    inset-inline-start: 0;
+    padding-inline-start: 0.75rem;
+    padding-block-end: 0.75rem;
+    justify-content: flex-end;
+    z-index: 10;
+    width: 100%;
+    display: flex;
     position: absolute;
     pointer-events: none;
 }
-.imgBotcontent{
-    padding: 1.25rem;
-}
-.imgBotcont{
-    transform: translateX(-111.32%);
-    margin-inline-end: 1.875rem;
-    border-radius: clamp(0.625rem,1.053vw,1.25rem);
-    height: 0;
-    padding-block-end: 125.0%;
-    position: absolute;
-    left: 0;
-    color: rgb(255 255 255);
-    width: 100%;
+.blkCart{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-bottom: 0.75rem;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-} */ 
+    line-height: 1;
+    color: rgb(255 255 255);
+    background: #171717;
+    background-color: rgb(23 23 23);
+    border-radius: 3.75rem;
+    max-height: 3.75rem;
+    border: none;
+    pointer-events: auto;
+}
+.cartBlk{
+    color: rgb(255, 255, 255);
+    position: relative;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 2px;
+}
+.cartt{
+    color: rgb(255 255 255);
+    cursor: pointer;
+    display: block;
+    font-family: Inter, sans-serif;
+    width: 1.125rem;
+    height: 1.125rem;
+    stroke-width: 1.5px;
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+.desImg{
+    display: flex;
+    padding: 16px 16px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: start;
+    gap: 0.25rem;
+    align-items: baseline;
+    width: 100%;
+}
+.SandalFor,.priceRs{
+    margin: 0;
+    font-family: Inter,sans-serif;
+    font-size: clamp(1.0rem, 0.873rem + 0.3175vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: inherit;
+    text-decoration: inherit;
+}
