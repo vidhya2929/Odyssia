@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    align-items: center;
 }
 .html{
     touch-action: manipulation;
@@ -285,13 +286,14 @@ body{
     width: 5px;
     height: 5px;
     border-radius: 9999px;
-    background-color: rgb(255 255 255);
     border: none;
     cursor: pointer;
     padding: 0;
 }
+#dotButColor{
+    background-color: rgb(255 255 255);
+}
 .scrollImg{
-    /* height: 396.047px; */
     padding-block-start: 39px;
     padding-block-end: 0px;
     position: relative;
@@ -604,6 +606,9 @@ body{
     margin: 0 auto;
     padding-inline: 1.25rem;
 }
+#shoBrand{
+    color: rgb(255 255 255);
+}
 .writeBrand{
     margin-block-end: 32px;
     line-height: 1;
@@ -619,7 +624,6 @@ body{
     font-weight: 400;
     letter-spacing: -0.03em;
     line-height: 1;
-    color: rgb(255 255 255);
 }
 .flexBrand{
     display: grid;
@@ -634,4 +638,273 @@ body{
     background-color: white;
     padding: 10px;
     border-radius: 6px;
+}
+#letCustom{
+    color: rgb(23 23 23);
+    transform: translateY(0px);
+    opacity: 1;
+    display: block;
+    display: inline-flex;
+    line-height: 1;
+    margin: -.1em -.05em;
+    padding: .08em .05em;
+}
+.quote{
+    /* height: 201.9px;
+    margin-block-start: 0;
+    overflow: hidden;
+    transform: translateX(0%);
+    position: absolute;
+    height: 100%;
+    width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+    box-sizing: border-box;
+}
+.quotee{
+    height: 48px;
+    width: 48px;
+    margin-bottom: 2rem;
+}
+blockquote{
+    margin: 0;
+    position: relative;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    display: block;
+    /* padding-block-start: 2rem; */
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: rgb(23 23 23);
+}
+cite{
+    display: block;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.6;
+    text-align: center;
+    /* margin-block-start: 2.125rem; */
+}
+.transDot{
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 9999px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 3px;
+    border-color: rgba(23 23 23);
+}
+#transparent{
+    background-color: transparent;
+    transition: .5s cubic-bezier(.3,1,.3,1);
+}
+.dotButbla{
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    padding: 1px;
+}
+#blacktrans{
+    background-color: transparent;
+}
+.dotBlack{
+    margin-top: 24px;
+    padding: 0;
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+#blackDot{
+    background-color: black;
+}
+.instaFollow{
+    z-index: 4;
+    padding-block-end: 3px;
+    padding-block-start: 24px;
+    position: relative;
+    color: rgb(23 23 23);
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+    margin-bottom: 0px;
+    text-align: left;
+    overflow-x: hidden;
+}
+.instaFeed{
+    margin-bottom: 30px;
+    margin-top: 0px;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 549;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: rgb(23 23 23);
+}
+.instaCont{
+    width: 280px;
+    height: unset;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    gap: 1px;
+    background-color: #e5e7eb;
+    grid-template-columns: repeat(3,1fr);
+}
+.instImg{
+    height: 93.333px;
+    width: 93.333px;
+    position: relative;
+    display: inline;
+    color: rgba(0,0,0,0);
+    padding: 0;
+}
+.footer{
+    width: 100%;
+    display: block;
+}
+.instaHover{
+   color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+   z-index: 1000; 
+}
+.sectionFoot{
+    z-index: 3;
+    border-end-end-radius: 16px;
+    border-end-start-radius: 16px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    position: relative;
+    color: rgb(255 255 255);
+    background-color: rgb(23 23 23);
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+    position: relative;
+    min-height: 185px;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+.flexEar{
+    transform: translateX(0%);
+    position: absolute;
+    left: 0;
+    gap: 1.25rem;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+strong{
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 1.25;
+    font-weight: bolder;
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    color: rgb(255 255 255);
+    margin: 0;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+.priceLine{
+    display: block;
+}
+.whiteDots{
+    padding: 0;
+    margin: 0;
+    margin-block-start: 1.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 12px;
+}
+.dotWhite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tranwhite{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 3px;
+    border: 2px solid white;
+    appearance: none;
+    border-color: rgba(255 255 255);
+    background-color: transparent;
+}
+
+.pageLast{
+    z-index: 2;
+    border-end-end-radius: clamp(1rem,1.578vw,1.875rem);
+    border-end-start-radius: clamp(1rem,1.578vw,1,875rem);
+    border-start-end-radius: clamp(1rem,1.578vw,1.875rem);
+    border-start-start-radius: clamp(1rem,1.578vw,1.875rem);
+    padding-block-start: 54px;
+    padding-block-end: 54px;
+    position: relative;
+    color: rgb(23 23 23);
+    background-color: rgb(255 255 255);
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+    display: grid;
+}
+.footLogo{
+    gap: 2.5rem;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+.imgOdyssia{
+    width: 118.038px;
+    max-width: 88.53px;
+    max-height: 42px;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+.socialMedias{
+    gap: 1.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.faceBook{
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
 }
