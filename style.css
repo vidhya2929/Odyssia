@@ -84,10 +84,11 @@ body{
     display: flex;
 }
 .quesVisit{
-    line-height: 1.25;
-    font-size: 13px;
+    line-height: 1;
+    font-size: 14px;
     font-family: Inter, sans-serif;
-    /* margin: 0; */
+    margin-bottom: 0 !important;
+    margin-top: 16px;
 }
 .belowTop{
     z-index: 20;
@@ -95,21 +96,21 @@ body{
     inset-block-start: 0;
 }
 .headWhitebg{
-    /* border-radius: 16px; */
+    height: 92px;
+    position: sticky;
+    top: 0;
+    z-index: 11;
 }
 .headPortion{
     column-gap: .75rem;
-    grid-template: minmax(0,1fr) auto minmax(0,1fr);
+    /* grid-template: minmax(0,1fr) auto minmax(0,1fr); */
     /* background: none; */
     border-start-end-radius: 16px;
     border-start-start-radius: 16px;
-    /* border-start-start-radius: clamp(1rem,1.578vw,1.875rem);
-    border-start-end-radius: clamp(1rem,1.578vw,1.875rem); */
     padding-block-start: 24px;
     padding-block-end: 24px;
     /* border-radius: 30px; */
-    position: relative;
-    /* color: rgb(23 23 23); */
+    /* position: relative; */
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
     padding-inline: 1.25rem;
@@ -203,7 +204,6 @@ body{
     letter-spacing: -0.03em;
     line-height: 1;
     color: 23 23 23; */
-    /* word-break: break-word; */
 }
 .odyssiaHead1{
     color: inherit;
@@ -213,9 +213,10 @@ body{
     position: relative;
 }
 .odyssPic{
-    max-height: 42.7px;
-    max-width: 90px;
-    height: auto;
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
     display: block;
     vertical-align: middle;
 }
@@ -255,6 +256,7 @@ body{
 }
 .mainContent{
     position: relative;
+    background-color: rgb(255 255 255);
 }
 .pageContainer{
     background-color: rgb(255 255 255);
@@ -322,7 +324,17 @@ body{
     background-color: rgb(255 255 255);
     text-align: center;
     margin: 0 auto;
-    padding-inline: 1.25rem;
+    padding-inline: 20px;
+}
+.scrollImge{
+    padding-block-start: 59px;
+    padding-block-end: 0px;
+    position: relative;
+    color: rgb(23 23 23);
+    background-color: rgb(255 255 255);
+    text-align: center;
+    margin: 0 auto;
+    padding-inline: 20px;
 }
 .headScroller{
     line-height: 1;
@@ -332,8 +344,23 @@ body{
     text-align: start;
     display: grid;
 }
+.headCro{
+    margin-bottom: 21px;
+}
+.headCro2{
+    margin-bottom: 32px;
+}
 .headScroll{
-    margin-bottom: 2rem;
+    line-height: 1;
+    gap: 1rem;
+    flex-direction: column;
+    z-index: 1;
+    text-align: start;
+    display: grid;
+}
+.headScrollfew{
+    /* margin-bottom: 28px; */
+   padding-bottom: 19px;
     line-height: 1;
     gap: 1rem;
     flex-direction: column;
@@ -346,11 +373,24 @@ body{
     font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: -0.72px;
+    letter-spacing: -0.072px;
     line-height: 24px;
     color: rgb(23 23 23);
     overflow: hidden;
-    margin: -.1em -.05em;
+    /* margin: -.1em -.05em; */
+    margin: 0;
+}
+.headWriter{
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.072px;
+    line-height: 24px;
+    color: rgb(23 23 23);
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: -20px;
 }
 .scrollDiv{
     display: flex;
@@ -360,7 +400,22 @@ body{
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
     scroll-behavior: smooth;
-    padding-inline: 1.25rem;
+    padding-inline: 25px;
+    margin-inline: -1.25rem;
+    scroll-padding-inline: 1.25rem;
+    padding-block-end: 0.0rem;
+    column-gap: 17px;
+    scrollbar-width: none;
+}
+.scrollDive{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    padding-inline: 25px;
     margin-inline: -1.25rem;
     scroll-padding-inline: 1.25rem;
     padding-block-end: 0.0rem;
@@ -421,7 +476,7 @@ body{
 }
 .scrolld{
     margin-bottom: 2rem;
-    gap: 1rem;
+    gap: 16px;
     /* justify-content: space-between; */
     display: flex;
     padding-inline: 1.25rem;
@@ -471,12 +526,15 @@ body{
 }
 .whiteMen{
    background-color: rgba(23, 23, 23, 0.024);
+   padding: 14px 16px;
 }
 .menBut{
     color: rgb(23 23 23);
 }
 .cartBlack{
     inset-inline-end: 0;
+    padding-bottom: 6px!important;
+    padding-right: 5px!important;
     inset-block-end: 0;
     padding-inline-start: 0.75rem;
     padding-block-end: 0.75rem;
@@ -490,7 +548,7 @@ body{
 .blkCart{
     width: 2.5rem;
     height: 2.5rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 10px;
     cursor: pointer;
     position: relative;
     display: inline-flex;
@@ -545,12 +603,24 @@ body{
     align-items: baseline;
     width: 100%;
 }
-.SandalFor,.priceRs{
+.SandalFor{
     margin: 0;
+    height: 20;
+    /* width: 100%; */
     font-family: Inter,sans-serif;
-    font-size: clamp(1.0rem, 0.873rem + 0.3175vw, 1.25rem);
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
+    color: inherit;
+    text-decoration: inherit;
+}
+.priceRs{
+    /* margin-top: 18px; */
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 399;
+    line-height: 19px;
     color: inherit;
     text-decoration: inherit;
 }
@@ -594,7 +664,7 @@ body{
     align-items: center;
     position: absolute;
     top: 45px;
-    right: 8px;
+    right: 28px;
 }
 .arrowScroll{
     opacity: 1;
@@ -608,11 +678,12 @@ body{
     border-top-left-radius: 6px;
     z-index: 10;
     top: 50%;
-    right: 0;
+    right: 10;
     position: absolute;
 }
 .paddiForColor{
-    padding-top: 39px;
+    /* padding-top: 39px; */
+    margin-top: 39px!important;
     padding-left: 20px;
     background-color: rgb(255, 255, 255);
     padding-right: 20px;
@@ -625,11 +696,13 @@ body{
 }
 .picColor{
     width: 100%;
-    height: 100%;
+    height: 325px;
     object-fit: cover;
     object-position: center 30%;
     display: block;
     border-radius: 10px;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
 }
 .shopBy{
     padding-block-start: 24px;
@@ -655,6 +728,7 @@ body{
     font-style: normal;
     font-weight: 400;
     letter-spacing: -0.03em;
+    align-items: flex-start;
     line-height: 1;
 }
 .flexBrand{
@@ -798,11 +872,10 @@ cite{
     position: relative;
     display: grid;
     gap: 1px;
-    /* background-color: #e5e7eb; */
     grid-template-columns: repeat(3,1fr);
 }
 .instImg{
-    height: 100%;
+    height: 93.33px;
     width: 100%;
     position: relative;
     display: inline;
@@ -870,14 +943,15 @@ strong{
 }
 .whiteDots{
     padding: 0;
-    margin: 0;
+    margin-top: 10px !important;
+    /* margin: 0; */
     margin-block-start: 1.2rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
-    gap: 12px;
+    gap: 18px;
 }
 .dotWhite{
     display: flex;
@@ -898,10 +972,10 @@ strong{
 }
 .pageLast{
     z-index: 2;
-    border-end-end-radius: 16px;
+    /* border-end-end-radius: 16px;
     border-end-start-radius: 16px;
     border-start-end-radius: 16px;
-    border-start-start-radius: 16px;
+    border-start-start-radius: 16px; */
     padding-block-start: 54px;
     padding-block-end: 54px;
     position: relative;
@@ -912,6 +986,7 @@ strong{
     padding-inline: 1.25rem;
     display: grid;
     gap: 40px;
+    border-radius:0 0 16px 16px;
 }
 .footLogo{
     gap: 2.5rem;
@@ -951,21 +1026,20 @@ strong{
 }
 .lastSlot{
     padding-top: 1.25rem;
-    padding: 1rem;
+    padding: 20px;
     justify-content: space-between;
     border: 1px solid rgba(0, 0, 0,0.1);
     align-items: center;
     display: flex;
     cursor: pointer;
     list-style-type: none;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     font-family: Inter,sans-serif;
     font-style: normal;
     letter-spacing: -0.03em;
     line-height: 1;
     color: rgb(23 23 23);
-
 }
 .downArrow{
     transform: rotate(180deg);
@@ -1067,12 +1141,60 @@ strong{
     align-items: flex-start;
     justify-content: center;
     padding-top: 4px;
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0,.14);                                                                                                                                                                                                                                                                                                                        
 }
 .whatsAppIcon{
     height: 35px;
     width: 35px;
     padding-top: 4px;
 }
-@media screen and (min-width:768px){
+.neww{
+    display: none;
+}
+@media screen and (min-width:375px){
+.oldd{
+    display: none;
+}
+.neww{
+    display: block;
+    font: bolder;
+}
+.silverDots{
+    bottom: 30px;
+    transform: translateX(-209%);
+}
+.instImg{
+    height: 111.66px;
+}
+.whiteDots{
+    gap: 18px;
+    margin: 10px;
+}
+.sectionFoot{
+    min-height: 162.5px;
+}
+.headCro{
+    margin-bottom: 22px;
+}
+.scrollDiv{
+    column-gap: 12px;
+}
+.dotBlack{
+    gap: 19px;
+}
+}
+@media screen and (min-width:425px){
+.silverDots{
+    bottom: 29px;
+    transform: translateX(-300%);
+}
+}
+@media screen and(min-width:768px){
+    
+}
+@media screen and(min-width:1024px){
+    
+}
+@media screen and(min-width:1440px){
     
 }
