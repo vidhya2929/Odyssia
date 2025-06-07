@@ -1214,7 +1214,7 @@ strong{
 }
 .odyssiaImg{
     visibility: visible;
-    position: absolute;
+    /* position: absolute; */
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -1233,13 +1233,16 @@ strong{
     display: block;
     vertical-align: middle; */
 }
+.imggg{
+    display: block;
+}
 .odyssiaImg{
     display: none;
 }
 @media screen and (min-width:375px){
-.odyssiaImg{
-    display: none;
-}
+    .odyssiaImg{
+        display: none;
+    }
 .oldd{
     display: none;
 }
@@ -1272,9 +1275,9 @@ strong{
 }
 }
 @media screen and (min-width:425px){
-.odyssiaImg{
-    display: none;
-}
+    .odyssiaImg{
+        display: none;
+    }    
 .silverDots{
     bottom: 29px;
     transform: translateX(-300%);
@@ -1284,34 +1287,52 @@ strong{
 }
 }
 @media screen and (min-width:767px){
-.odyssiaImg{
+ .odyssiaImg{
     display: none;
-}
+ }
 .instImg{
     height: 242.66px;
 }
 }
-@media screen and(min-width:768px){
+@media screen and (min-width:768px){
 .imggg{
     display: none;
 }
 .odyssiaImg{
     display: block;
 }
+.scroll{
+    width: 276px;
 }
-@media screen and(min-width:1024px){
-.odyssiaImg{
-    display: block;
-}   
-.imggg{
-    display: none;
+.scrollItem{
+    width: 276px;
 }
 }
-@media screen and(min-width:1440px){
-.imggg{
-    display: none;
+@media screen and (min-width:1024px){
+    .imggg{
+        display: none;
+    }
+    .odyssiaImg{
+        display: block;
+    }
+    .scroll{
+        width: 306px;
+    }
+    .scrollItem{
+        width: 306px;
+    }
 }
-.odyssiaImg{
-    display: block;
-}   
+@media screen and (min-width:1440px){
+    .imggg{
+        display: none;
+    }
+    .odyssiaImg{
+        display: block;
+    }
+    .scroll{
+        width: 435px;
+    }
+    .scrollItem{
+        width: 435px;
+    }
 }
